@@ -1,0 +1,22 @@
+/* 
+external css (외부 css) : css파일에 코드 작성
+*/
+
+h1{
+    color: lavender;
+    background-color: deepskyblue;
+}
+
+p{
+    color: gold;
+    background-color: tomato;
+}
+
+h2{
+    color: darkkhaki;
+    background-color: blueviolet;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+}
