@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        li {
+            text-decoration: underline;
+        }
+
+        /* 
+         > : 자식 선택자
+        */
+
+        /* ul안에 있는 li요소들만 적용 */
+        ul > li {
+            color: blue;
+        }
+
+        /* 부모 클래스가 todo인 li요소들만 적용 */
+        .todo > li {
+            background-color: yellow;
+        }
+
+        /* 부모클래스가 note인 li요소들만 적용 */
+        .note > li {
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ul*2>li*3>lorem3 -->
+    <ul class="todo">
+        <li>Lorem, ipsum dolor.</li>
+        <li>Mollitia, ipsum ad?</li>
+        <li>Assumenda, sit debitis.</li>
+    </ul>
+    <ul class="note">
+        <li>Lorem, ipsum dolor.</li>
+        <li>Quisquam, ratione quas!</li>
+        <li>Autem, adipisci dignissimos?</li>
+    </ul>
+</body>
+</html>

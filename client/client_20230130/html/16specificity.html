@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 
+        구체적으로 선택할 수록 우선순위가 높다
+
+        specificity
+        선택자에 커서를 올려보면 Selector Specificity 점수가 나온다
+        element selector : 1점
+        class selector : 10점
+        id selector : 100점
+
+        단, element selector 10개와 class selector 1개의 값은 같지 않다
+        하위 선택자가 많아도 상위 선택자보다 점수(우선순위)가 더 높을 순 없음
+        */
+
+        /* element selector 1개 */
+        h1 {
+            border: 5px solid;
+        }
+
+        /* element selector 1개, class selector 1개 */
+        h1.note {
+            border: 5px dotted;
+        }
+
+        /* element selector 1개, class selector 2개 */
+        h1.note.error {
+            border: 5px double;
+        }
+
+        /* 순서 중요, 가장 최신것이 적용됨 */
+        h1.note.error {
+            border: inset;
+        }
+
+        /* element selector 1개, class selector 1개 id selector 1개 */
+        h1.note#eror{
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <h1 class="note">Lorem, ipsum dolor.</h1>
+    <h1 class="note error">Lorem, ipsum dolor.</h1>
+    <h1 class="note" id="eror">Lorem, ipsum.</h1>
+</body>
+</html>

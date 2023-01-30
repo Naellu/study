@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p {
+            color:blue;
+        }
+
+        /* 
+        인접형제선택자
+        형제 하나만 적용시킴
+        (h1이전에 있는 형제 말고
+        h1다음으로 붙어있는 p 1개만 적용)
+        */
+        h1 + p {
+            background-color: yellow;
+            color: coral;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- (h1>lorem1^p>lorem)*2+p>lorem -->
+    <h1>Lorem.</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus nisi corrupti voluptates voluptatibus, mollitia aperiam quo tenetur quisquam architecto nam sit eaque incidunt vitae, numquam officiis officia aliquid dolorum consectetur?</p>
+    <h1>Quasi!</h1>
+    <p>Accusantium eius aperiam quibusdam perferendis distinctio voluptatibus nisi et sint sequi repudiandae. Repudiandae nostrum reiciendis quod a fuga minima neque aut, nam, nemo aliquid, quam ipsum ullam ratione? Nisi, harum?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium vero harum aspernatur quidem ipsum maiores, rem itaque neque nesciunt eius porro delectus quis distinctio et voluptates alias hic qui rerum.</p>
+</body>
+</html>

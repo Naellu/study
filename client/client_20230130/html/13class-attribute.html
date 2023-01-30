@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .error {
+            background-color: green;
+            color: white;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* 
+        같은 클래스가 있을 경우 최신 클래스로 적용됨
+         */
+        .center {
+            text-align: right;
+        }
+
+        .note {
+            background-color: yellow;
+        }
+
+        .delete {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--
+        class 속성은 영문, 숫자, _ , - 조합으로 작성
+        중복 가능
+        하나의 요소는 빈칸으로 구분해서 여러 클래스를 가질 수 있음
+    -->
+
+    <!-- h1*10>lorem2 -->
+    <h1 class="error">Lorem, ipsum.</h1>
+    <h1 class="note center">Accusamus, eum?</h1>
+    <h1 class="error">Impedit, quae?</h1>
+    <h1 class="note">Aut, quae.</h1>
+    <h1 class="note center">Quos, quasi!</h1>
+    <h1 class="delete">Eveniet, veniam?</h1>
+    <h1 class="delete">Veritatis, esse!</h1>
+    <h1 class="note delete">Accusantium, rerum!</h1>
+    <h1 class="note delete">Voluptates, optio?</h1>
+    <h1 class="error delete">Hic, vitae!</h1>
+</body>
+</html>
