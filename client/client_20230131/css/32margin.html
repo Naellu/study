@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div {
+            border: 5px solid;
+        }
+
+        #box1 {
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        #box2 {
+            margin-top: 30px;
+        }
+
+        /* margin collapse
+        box1의 margin-bottom과 box2의 margin-top이 같은 margin으로 여겨지기에
+        위와 같이 80px의 margin이 생길것 같지만 실제론 50px만 만들어진다 */
+
+    </style>
+</head>
+<body>
+    <!-- 
+        #box$*2{box$} 
+        중괄호 안에는 컨텐트임
+    -->
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+</body>
+</html>
