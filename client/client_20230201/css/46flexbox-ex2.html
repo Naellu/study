@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .item {
+            color: white;
+            background-color: black;
+            font-size: 17px;
+            padding: 15px 25px;
+        }
+        
+        .container, .container2 {
+            display: flex;
+        }
+
+        .container2 > img {
+            width: 70px
+        }
+
+        .container2 > div {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .side-left {
+            padding: 25px 12px;
+        }
+
+        .side-right {
+            border: 1.5px solid black;
+            border-radius: 5px;
+            border-left: 10px;
+            border-right: 10px;
+            height: 30px;
+            width: auto;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        flexbox
+        감싸고 있는 요소 : flex container
+        flex container의 '자식' 요소들 : flex item
+        
+        container클래스를 가진 div가 flex container
+        item클래스를 가진 div가 flex item
+        item클래스 내 요소는 자손이기때문에 flex item이 아니다
+     -->
+
+    <div class="container2">
+        <img src="C:\study\client\client_20230127\html\intellij.png" alt="">
+        <div class="side-left">Tutorials <i class="fa-solid fa-caret-down"></i></div>
+        <div class="side-left">References <i class="fa-solid fa-caret-down"></i></div>
+        <div class="side-left">Exercises <i class="fa-solid fa-caret-down"></i></div>
+        <div class="side-left" style="margin-right: auto;">Sign up <i class="fa-solid fa-caret-down"></i></div>
+        <div class="side-right">Pro</div>
+        <div class="side-right">Get Certified</div>
+        <div class="side-right">Create Website</div>
+        <div class="side-right" style="margin-right: 20px;">Log in</div>
+    </div>
+
+    <div class="container" style="justify-content: space-between; background-color: black;"> 
+        <div class="container">
+            <!-- .item*9 -->
+            <div class="item">
+                <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="item">
+                HTML
+            </div>
+            <div class="item">
+                CSS
+            </div>
+            <div class="item">
+                JAVASCRIPT
+            </div>
+            <div class="item">
+                SQL
+            </div>
+            <div class="item">
+                PYTHON
+            </div>
+            <div class="item">
+                JAVA
+            </div>
+            <div class="item">
+                PHP
+            </div>
+            <div class="item">
+                BOOTSTRAP
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="item">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-earth-americas"></i>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
