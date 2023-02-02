@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .outer {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 5px solid green;
+            padding: 33px;
+        }
+
+        
+        .inner {
+            width: 300px;
+            height: 300px;
+            border: 5px solid violet;
+            /* left: 50%; */
+            /* transform: translateX(-50%); */
+            
+            /* 
+            absolute : 가장 가까운 조상중 포지션된 요소 기준
+            포지션된 요소는 static이 아닌 요소(relative, fixed, sticky 등등)
+            포지션된 요소가 없으면 root(현재 문서에서 가장 위에 있는 요소)에 적용됨
+
+            inner에만 absolute 포지션을 넣으면 html요소 기준으로 적용되고
+            outer에 static이 아닌 포지션을 넣으면 outer 기준으로 적용된다
+            */
+            position: absolute;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- .outer>lorem3+.inner>lorem3 -->
+    <div class="outer">
+        Lorem, ipsum dolor.
+        <div class="inner">
+            Lorem, ipsum dolor.
+        </div>
+    </div>
+
+</body>
+</html>
