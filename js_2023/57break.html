@@ -12,19 +12,22 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    
-    let p = Number(prompt("수를 입력하세요."));
+    // 컴퓨터가 1~100의 수를 선택
+    let com = parseInt(Math.random() * 100) + 1;
 
-    // if(p == 0) {
-    //     console.log("0을 입력하셨습니다.");
-    // } else if (p % 2 == 0) {
-    //     console.log("짝수입니다.");
-    // } else {
-    //     console.log("홀수입니다.");
-    // }
+    while(true) {
+        let user = +prompt("1~100의 값 중 컴퓨터가 선택한 수를 맞춰보세요", 50);
 
-    console.log((p == 0) ? "0을 입력하셨습니다." : ((p % 2 == 0) ? "짝수입니다." : "홀수입니다."));
-
+        if(user == com) {
+            alert("정답입니다");
+            break;
+        } else if (user > com) {
+            alert("더 작은 수를 입력해주세요.");
+        } else {
+            alert("더 큰 수를 입력해주세요");
+        }
+        
+    }
     </script>
 </body>
 </html>
