@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    </style>
+</head>
+<body>
+    <!-- input#input1+ul#list1 -->
+    <input type="text" id="input1">
+    <ul id="list1"></ul>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    
+    // id가 input1인 요소를 고르고 
+    // addEventListener에 첫번째 매개변수인 이벤트를 설정하고, 두번째 매개변수인 함수실행부(이벤트객체)를 적는다
+    document.querySelector("#input1").addEventListener("keyup" , function(e) {
+        // 이벤트 객체의 키가 엔터키값과 동일하다면
+        if (e.key === "Enter") {
+            // 목록을 만들기 위해 변수 li에 li요소를 만들고
+            let li = document.createElement("li");
+            // li요소의 컨텐츠공간에 이 객체(위에있는 text input 요소)의 value 값을 넣고
+            li.textContent = this.value;
+            // id가 list1인 요소에 변수li을 추가(append)
+            document.querySelector("#list1").append(li);
+            // input창의 입력칸을 다시 초기화
+            this.value = "";
+        }
+    })
+
+    </script>
+</body>
+</html>
