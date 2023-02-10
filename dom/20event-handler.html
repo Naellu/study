@@ -13,10 +13,26 @@
     <input type="text" id="input1">
     <ul id="list1"></ul>
 
+    <hr>
+    <!-- input#input2+ul#list2 -->
+    <input type="text" id="input2">
+    <ul id="list2"></ul>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+
+    // jquery
+    // $ 표시를 쓴 게 jquery이다
+    $("#input2").keyup(function(e) {
+        if(e.key === "Enter") {
+            $("#list2").append(`<li>${$(this).val()}</li>`);
+            $(this).val("");
+        }
+    })
     
+    // 일반 자바스크립트 코드(vanilla javascript)
     // id가 input1인 요소를 고르고 
     // addEventListener에 첫번째 매개변수인 이벤트를 설정하고, 두번째 매개변수인 함수실행부(이벤트객체)를 적는다
     document.querySelector("#input1").addEventListener("keyup" , function(e) {
@@ -31,7 +47,9 @@
             // input창의 입력칸을 다시 초기화
             this.value = "";
         }
-    })
+    });
+
+
 
     </script>
 </body>
