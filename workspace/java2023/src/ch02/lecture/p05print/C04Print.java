@@ -1,0 +1,10 @@
+package ch02.lecture.p05print;
+
+public class C04Print {
+	public static void main(String[] args) {
+		// 아규먼트는 순서대로 적용됨
+		System.out.printf("%d, %d%n", 3, 5);
+
+		
+	}
+}
